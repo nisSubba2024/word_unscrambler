@@ -45,7 +45,6 @@ body {
 
 #container {
     padding: 3rem;
-    /*background-color: var(--main-container-color);*/
     font-size: 2rem;
     width: 100%;
     display: flex;
@@ -155,12 +154,10 @@ body {
     display: none;
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 600px) {
     html {
-        font-size: 40%;
-    }
-
-    body {
-        align-items: flex-start;
+        font-size: 30%;
     }
 }
+
+
