@@ -2,6 +2,8 @@
 
 Unscramble Me is a web app that helps users unscramble words by matching them against a word bank.
 
+![screenshot of calc website](./images/unscramble_me.png)
+
 ## Demo
 Please try out my demo here: https://nissubba2024.github.io/word_unscrambler/
 
