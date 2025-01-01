@@ -33,6 +33,6 @@ Please try out my demo here: https://nissubba2024.github.io/word_unscrambler/
 ### Installation
 1. Clone the repository:
    ```bash
-   git clone https://github.com/nisSubba2024/unscramble_me.git
+   git clone https://github.com/nisSubba2024/word_unscrambler.git
    ```
 
