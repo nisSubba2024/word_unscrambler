@@ -156,7 +156,36 @@ body {
 
 @media screen and (max-width: 600px) {
     html {
-        font-size: 30%;
+        font-size: 40%;
+    }
+
+    #page-title {
+        font-size: 4rem;
+    }
+    #container {
+        padding: 1rem;
+    }
+
+    #input-field {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #input-field > #scrambled-word {
+        width: 100%;
+
+    }
+    #scrambled-field {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .btn {
+        padding: 1rem 2rem;
     }
 }
 
