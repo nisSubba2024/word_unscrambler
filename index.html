@@ -1,0 +1,50 @@
+<!--
+ * //////////////////////////////////////////////////////////////////////
+ *      PROGRAM: UNSCRAMBLE_ME/INDEX.HTML
+ *      Written by Nishan Subba
+ *      GitHub: @nisSubba2024
+ *      Purpose: Layout for the unscramble me web app
+ *      Last Date Modified: Dec 31, 2024
+ * //////////////////////////////////////////////////////////////////////
+-->
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <meta http-equiv="x-ua-compatible" content="ie=edge"/>
+        <meta name="description" content="word unscramble"/>
+        <title>Unscramble Me</title>
+        <link rel="stylesheet" href="styles.css" type="text/css"/>
+    </head>
+    <body>
+        <div id="container">
+            <h1 id="page-title">Unscramble Me</h1>
+            <div id="scrambled-field">
+                <div id="input-field">
+                    <label for="scrambled-word"> Enter Scrambled Word </label>
+                    <input
+                            type="text"
+                            name="scrambled-word"
+                            id="scrambled-word"
+                    />
+                </div>
+                <div id="btn-container">
+                    <button id="submit-btn" class="btn" type="button">
+                        <span>Unscramble</span>
+
+                    </button>
+                    <button id="reset-btn" class="btn" type="button">
+                        <span>Reset</span>
+
+                    </button>
+                </div>
+            </div>
+            <div id="unscrambled-field" class="hide">
+                <h1 class="section-title">Unscrambled Word</h1>
+            </div>
+        </div>
+
+        <script src="unscramble_logic.js"></script>
+    </body>
+</html>

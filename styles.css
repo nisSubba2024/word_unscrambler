@@ -1,0 +1,166 @@
+/*
+ * //////////////////////////////////////////////////////////////////////
+ *      PROGRAM: UNSCRAMBLE_ME/STYLES.CSS
+ *      Written by Nishan Subba
+ *      GitHub: @nisSubba2024
+ *      Purpose: Style the page
+ *      Last Date Modified: Dec 31, 2024
+ * //////////////////////////////////////////////////////////////////////
+ */
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
+:root {
+    --main-bg-color: linear-gradient(
+            256deg,
+            rgba(238, 174, 202, 1) 0%,
+            rgba(148, 187, 233, 1) 100%
+    );
+    --main-container-color: #43e5a0;
+    --btn-default-color: linear-gradient(45deg, #d75c77, #c13d60);
+    --main-font-family: "Rubik", sans-serif;
+    --x-pos: 0;
+    --y-pos: 0;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    background: var(--main-bg-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: var(--main-font-family), sans-serif;
+    background-repeat: no-repeat;
+}
+
+#container {
+    padding: 3rem;
+    /*background-color: var(--main-container-color);*/
+    font-size: 2rem;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+#page-title {
+    text-align: center;
+    font-size: 6rem;
+    margin-bottom: 3rem;
+}
+
+#scrambled-field {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+#input-field > * {
+    display: block;
+}
+
+#input-field > label {
+    margin: 0 0 1rem 0;
+}
+
+#input-field > #scrambled-word {
+    width: 50rem;
+    height: 4rem;
+    font-size: 2rem;
+    padding: 0 1rem;
+    border-radius: 0.5rem;
+    border: none;
+    box-shadow: 0 0 12px -2px rgba(0, 0, 0, 0.5);
+}
+
+#btn-container {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    align-content: center;
+    margin-bottom: 2rem;
+}
+
+
+.btn {
+    padding: 1.6rem 4.2rem;
+    border-radius: 0.3rem;
+    box-shadow: 0 0 12px -2px rgba(0, 0, 0, 0.5);
+    line-height: 1.25;
+    background: #fc6e51;
+    color: #fff;
+    font-size: 1.6rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    border: none;
+    cursor: pointer;
+    font-family: var(--main-font-family), sans-serif;
+    font-weight: 600;
+    position: relative;
+    overflow: hidden;
+}
+
+.btn span {
+    position: relative;
+    z-index: 1;
+}
+
+.btn::before {
+    content: "";
+    position: absolute;
+    background: var(--main-container-color);
+    width: 0;
+    height: 0;
+    left: var(--x-pos);
+    top: var(--y-pos);
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    transition: width 0.5s, height 0.5s;
+}
+
+.btn:hover::before {
+    width: 50rem;
+    height: 30rem;
+}
+
+#unscrambled-field {
+    display: flex;
+    gap: 2rem;
+    flex-direction: column;
+}
+
+.section-title {
+    font-size: 3rem;
+}
+
+.card {
+    background-color: #fff;
+    padding: 1rem;
+    box-shadow: 0 0 12px -2px rgba(0, 0, 0, 0.5);
+}
+
+#unscrambled-field.hide {
+    display: none;
+}
+
+@media screen and (max-width: 500px) {
+    html {
+        font-size: 40%;
+    }
+
+    body {
+        align-items: flex-start;
+    }
+}
