@@ -40,6 +40,7 @@ function hashMap(wordBank) {
 }
 
 function createWordCard(unscrambledWordList) {
+    console.log(unscrambledWordList);
     for (let word of unscrambledWordList) {
         const createDiv = document.createElement("div");
         unscrambledField.appendChild(createDiv);
@@ -97,14 +98,15 @@ buttonTag.forEach(tag => {
 })
 
 submitBtn.addEventListener("click", function () {
-    const scrambledWordValue = scrambledWord.value;
+    const scrambledWordValue = scrambledWord.value.toLowerCase();
     if (!validateUserInput(scrambledWordValue)) {
         alert("Please enter a valid scrambled word");
     } else {
         unscrambledField.classList.remove("hide");
         removeSibling(sectionTitle);
         const splitScrambledWord = scrambledWordValue.split("").sort().join("");
-        const unscrambledWord = wordHashMap.get(splitScrambledWord.toLowerCase());
+        const lowerCaseWord = splitScrambledWord.toLowerCase();
+        const unscrambledWord = wordHashMap.get(lowerCaseWord);
         const titleCaseWordList = titleCase(unscrambledWord);
         createWordCard(titleCaseWordList);
     }
